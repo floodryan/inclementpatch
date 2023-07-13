@@ -3269,6 +3269,14 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_FOCUS_ENERGY},
     },
 
+    [MOVE_WAVE_CRASH] =
+    {
+        .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .comboStarterId = 0,
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY},
+    },
+
     [MOVE_VACUUM_WAVE] =
     {
         .effect = CONTEST_EFFECT_NEXT_APPEAL_EARLIER,

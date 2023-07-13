@@ -2987,6 +2987,10 @@ static const u8 sEERIE_SPELLDescription[] = _(
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
 
+static const u8 sWAVE_CRASHDescription[] = _(
+    "Crashes The foe with force.");
+
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -3746,4 +3750,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_GLACIAL_LANCE - 1] = sGLACIAL_LANCEDescription,
     [MOVE_ASTRAL_BARRAGE - 1] = sASTRAL_BARRAGEDescription,
     [MOVE_EERIE_SPELL - 1] = sEERIE_SPELLDescription,
+    [MOVE_WAVE_CRASH - 1] = sWAVE_CRASHDescription,
 };

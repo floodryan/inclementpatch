@@ -45,9 +45,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DOUBLE_SLAP] =
     {
         .effect = EFFECT_MULTI_HIT,
-        .power = 15,
-        .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .power = 25,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -66,7 +66,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .accuracy = 85,
         #endif
         .effect = EFFECT_MULTI_HIT,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FAIRY,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -79,8 +79,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_HIT,
         .power = 80,
-        .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -92,7 +92,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_PAY_DAY] =
     {
         .effect = EFFECT_PAY_DAY,
-        .power = 40,
+        .power = 80,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
@@ -106,7 +106,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FIRE_PUNCH] =
     {
         .effect = EFFECT_BURN_HIT,
-        .power = 75,
+        .power = 80,
         .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 15,
@@ -120,7 +120,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ICE_PUNCH] =
     {
         .effect = EFFECT_FREEZE_HIT,
-        .power = 75,
+        .power = 80,
         .type = TYPE_ICE,
         .accuracy = 100,
         .pp = 15,
@@ -134,7 +134,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_THUNDER_PUNCH] =
     {
         .effect = EFFECT_PARALYZE_HIT,
-        .power = 75,
+        .power = 80,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 15,
@@ -162,8 +162,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_VISE_GRIP] =
     {
         .effect = EFFECT_HIT,
-        .power = 55,
-        .type = TYPE_NORMAL,
+        .power = 65,
+        .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -195,8 +195,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
         #endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = 80,
-        .type = TYPE_NORMAL,
+        .power = 130,
+        .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -208,7 +208,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SWORDS_DANCE] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .pp = 20,
+            .pp = 1,
         #else
             .pp = 30,
         #endif
@@ -261,7 +261,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_WING_ATTACK] =
     {
         #ifdef REBALANCED_VERSION
-            .power = 80,
+            .power = 60,
             .pp = 20,
         #else
             .power = 60,
@@ -301,7 +301,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FLY] =
     {
-        .power = 90,
+        .power = 100,
         .effect = EFFECT_SEMI_INVULNERABLE,
         .type = TYPE_FLYING,
         #ifdef REBALANCED_VERSION
@@ -320,12 +320,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_BIND] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .accuracy = 85,
+            .accuracy = 100,
         #else
             .accuracy = 75,
         #endif
         .effect = EFFECT_TRAP,
-        .power = 15,
+        .power = 45,
         .type = TYPE_NORMAL,
         .pp = 20,
         .secondaryEffectChance = 100,
@@ -338,9 +338,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SLAM] =
     {
         .effect = EFFECT_HIT,
-        .power = 80,
-        .type = TYPE_NORMAL,
-        .accuracy = 75,
+        .power = 95,
+        .type = TYPE_ICE,
+        .accuracy = 95,
         .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -374,8 +374,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_STOMP] =
     {
         .effect = EFFECT_FLINCH_HIT,
-        .power = 65,
-        .type = TYPE_NORMAL,
+        .power = 75,
+        .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 30,
@@ -388,7 +388,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DOUBLE_KICK] =
     {
         .effect = EFFECT_DOUBLE_HIT,
-        .power = 30,
+        .power = 40,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 30,
@@ -402,9 +402,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MEGA_KICK] =
     {
         .effect = EFFECT_HIT,
-        .power = 120,
-        .type = TYPE_NORMAL,
-        .accuracy = 75,
+        .power = 110,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 85,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -474,7 +474,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 15,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_SHEER_FORCE_BOOST,
@@ -484,8 +484,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_HORN_ATTACK] =
     {
         .effect = EFFECT_HIT,
-        .power = 65,
-        .type = TYPE_NORMAL,
+        .power = 75,
+        .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 25,
         .secondaryEffectChance = 0,
@@ -498,9 +498,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FURY_ATTACK] =
     {
         .effect = EFFECT_MULTI_HIT,
-        .power = 15,
-        .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .power = 25,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -566,12 +566,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_WRAP] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .accuracy = 90,
+            .accuracy = 100,
         #else
             .accuracy = 85,
         #endif
         .effect = EFFECT_TRAP,
-        .power = 15,
+        .power = 45,
         .type = TYPE_NORMAL,
         .pp = 20,
         .secondaryEffectChance = 100,
@@ -584,9 +584,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_TAKE_DOWN] =
     {
         .effect = EFFECT_RECOIL_25,
-        .power = 90,
-        .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .power = 110,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -605,7 +605,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .pp = 20,
         #endif
         .effect = EFFECT_RAMPAGE,
-        .type = TYPE_NORMAL,
+        .type = TYPE_GHOST,
         .accuracy = 100,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_RANDOM,
@@ -679,7 +679,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
             .power = 25,
-            .accuracy = 95,
+            .accuracy = 100,
         #else
             .power = 14,
             .accuracy = 85,
@@ -763,7 +763,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_SLEEP,
         .power = 0,
         .type = TYPE_NORMAL,
-        .accuracy = 55,
+        .accuracy = 85,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -791,7 +791,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_SONICBOOM,
         .power = 1,
         .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -967,7 +967,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         #endif
         .effect = EFFECT_FREEZE_HIT,
         .type = TYPE_ICE,
-        .accuracy = 70,
+        .accuracy = 75,
         .pp = 5,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_BOTH,
@@ -1007,7 +1007,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_AURORA_BEAM] =
     {
         .effect = EFFECT_ATTACK_DOWN_HIT,
-        .power = 65,
+        .power = 75,
         .type = TYPE_ICE,
         .accuracy = 100,
         .pp = 20,
@@ -1020,10 +1020,10 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HYPER_BEAM] =
     {
-        .effect = EFFECT_RECHARGE,
-        .power = 150,
+        .effect = EFFECT_OVERHEAT,
+        .power = 120,
         .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -1067,7 +1067,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SUBMISSION] =
     {
         #ifdef REBALANCED_VERSION
-            .power = 90,
+            .power = 110,
             .accuracy = 100,
             .pp = 15,
         #else
@@ -1135,7 +1135,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_STRENGTH] =
     {
         .effect = EFFECT_CLOSE_COMBAT,
-        .power = 100,
+        .power = 115,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 10,
@@ -1217,9 +1217,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_RAZOR_LEAF] =
     {
         .effect = EFFECT_HIT,
-        .power = 55,
+        .power = 65,
         .type = TYPE_GRASS,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 25,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_BOTH,
@@ -1329,8 +1329,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FIRE_SPIN] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .power = 35,
-            .accuracy = 85,
+            .power = 45,
+            .accuracy = 100,
         #else
             .power = 15,
             .accuracy = 70,
@@ -1418,7 +1418,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_ROCK,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -1458,7 +1458,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DIG] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .power = 80,
+            .power = 95,
         #else
             .power = 60,
         #endif
@@ -1539,7 +1539,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 0,
-        .pp = 40,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -1553,7 +1553,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 0,
-        .pp = 30,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -1636,7 +1636,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_DEFENSE_DOWN_2,
         .power = 0,
         .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .accuracy = 100,
         .pp = 40,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -1651,7 +1651,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 15,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -1662,7 +1662,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_RECOVER] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .pp = 10,
+            .pp = 5,
         #else
             .pp = 20,
         #endif
@@ -1683,7 +1683,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 30,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -1694,7 +1694,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MINIMIZE] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .pp = 10,
+            .pp = 1,
         #else
             .pp = 20,
         #endif
@@ -1743,7 +1743,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_WATER,
         .accuracy = 0,
-        .pp = 40,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -1757,7 +1757,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 40,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -1768,7 +1768,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_BARRIER] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .pp = 20,
+            .pp = 1,
         #else
             .pp = 30,
         #endif
@@ -1874,14 +1874,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_MIRROR_MOVE] =
     {
-        .effect = EFFECT_MIRROR_MOVE,
-        .power = 0,
+        .effect = EFFECT_HIT,
+        .power = 40,
         .type = TYPE_FLYING,
         .accuracy = 0,
         .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_DEPENDS,
-        .priority = 0,
+        .priority = 1,
         .flags = 0,
         .split = SPLIT_STATUS,
     },
@@ -1890,7 +1890,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_EXPLOSION,
         .power = 200,
-        .type = TYPE_NORMAL,
+        .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -1904,8 +1904,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_HIT,
         .power = 100,
-        .type = TYPE_NORMAL,
-        .accuracy = 75,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -1941,7 +1941,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         #endif
         .effect = EFFECT_POISON_HIT,
         .type = TYPE_POISON,
-        .accuracy = 70,
+        .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 40,
         .target = MOVE_TARGET_SELECTED,
@@ -2027,14 +2027,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_CLAMP] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .accuracy = 85,
+            .accuracy = 100,
             .pp = 15,
         #else
             .accuracy = 75,
             .pp = 10,
         #endif
         .effect = EFFECT_TRAP,
-        .power = 35,
+        .power = 45,
         .type = TYPE_WATER,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -2046,7 +2046,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SWIFT] =
     {
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = 75,
         .type = TYPE_NORMAL,
         .accuracy = 0,
         .pp = 20,
@@ -2060,14 +2060,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SKULL_BASH] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 130,
+            .power = 150,
             .pp = 10,
         #else
             .power = 100,
             .pp = 15,
         #endif
         .effect = EFFECT_SKULL_BASH,
-        .type = TYPE_NORMAL,
+        .type = TYPE_STEEL,
         .accuracy = 100,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -2099,8 +2099,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_CONSTRICT] =
     {
         .effect = EFFECT_SPEED_DOWN_HIT,
-        .power = 10,
-        .type = TYPE_NORMAL,
+        .power = 85,
+        .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 35,
         .secondaryEffectChance = 10,
@@ -2116,7 +2116,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -2215,7 +2215,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_POISON_GAS] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .accuracy = 90,
+            .accuracy = 100,
             .target = MOVE_TARGET_BOTH,
         #elif B_UPDATED_MOVE_DATA == GEN_5
             .accuracy = 80,
@@ -2237,7 +2237,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_BARRAGE] =
     {
         .effect = EFFECT_MULTI_HIT,
-        .power = 15,
+        .power = 25,
         .type = TYPE_NORMAL,
         .accuracy = 85,
         .pp = 20,
@@ -2289,11 +2289,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST,
         #endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = 140,
+        .power = 150,
         .type = TYPE_FLYING,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 5,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
@@ -2335,8 +2335,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DIZZY_PUNCH] =
     {
         .effect = EFFECT_CONFUSE_HIT,
-        .power = 70,
-        .type = TYPE_NORMAL,
+        .power = 80,
+        .type = TYPE_FAIRY,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 20,
@@ -2351,7 +2351,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_SLEEP,
         .power = 0,
         .type = TYPE_GRASS,
-        .accuracy = 100,
+        .accuracy = 90,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -2413,9 +2413,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ACID_ARMOR] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .pp = 20,
+            .pp = 1,
         #else
-            .pp = 40,
+            .pp = 1,
         #endif
         .effect = EFFECT_DEFENSE_UP_2,
         .power = 0,
@@ -2432,7 +2432,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
             .power = 100,
-            .accuracy = 90,
+            .accuracy = 100,
         #elif B_UPDATED_MOVE_DATA == GEN_5
             .power = 90,
             .accuracy = 90,
@@ -2467,8 +2467,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FURY_SWIPES] =
     {
         .effect = EFFECT_MULTI_HIT,
-        .power = 18,
-        .type = TYPE_NORMAL,
+        .power = 25,
+        .type = TYPE_STEEL,
         .accuracy = 80,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -2486,9 +2486,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_TWO_STRIKES,
         #endif
         .effect = EFFECT_DOUBLE_HIT,
-        .power = 50,
+        .power = 55,
         .type = TYPE_GROUND,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -2515,7 +2515,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_FLINCH_HIT,
         .power = 75,
         .type = TYPE_ROCK,
-        .accuracy = 90,
+        .accuracy = 95,
         .pp = 10,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_BOTH,
@@ -2527,9 +2527,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_HYPER_FANG] =
     {
         .effect = EFFECT_FLINCH_HIT,
-        .power = 80,
+        .power = 95,
         .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -2544,7 +2544,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 30,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -2573,7 +2573,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_TRI_ATTACK] =
     {
         .effect = EFFECT_TRI_ATTACK,
-        .power = 80,
+        .power = 85,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 10,
@@ -2601,7 +2601,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SLASH] =
     {
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 80,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
@@ -2754,7 +2754,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FLAME_WHEEL] =
     {
         .effect = EFFECT_BURN_HIT,
-        .power = 60,
+        .power = 75,
         .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 25,
@@ -2797,7 +2797,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_CURSE,
         .power = 0,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -2838,7 +2838,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_FLYING,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -3007,7 +3007,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -3046,14 +3046,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_OCTAZOOKA] =
     {
         #ifdef REBALANCED_VERSION
-            .power = 85,
+            .power = 100,
         #else
             .power = 65,
         #endif
         .effect = EFFECT_ACCURACY_DOWN_HIT,
         .type = TYPE_WATER,
         .pp = 10,
-        .secondaryEffectChance = 50,
+        .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_BALLISTIC | FLAG_SHEER_FORCE_BOOST,
@@ -3149,9 +3149,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ICY_WIND] =
     {
         .effect = EFFECT_SPEED_DOWN_HIT,
-        .power = 55,
+        .power = 65,
         .type = TYPE_ICE,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_BOTH,
@@ -3187,7 +3187,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .power = 25,
             .priority = 0,
         #endif
-        .accuracy = 90,
+        .accuracy = 100,
         .effect = EFFECT_MULTI_HIT,
         .type = TYPE_GROUND,
         .pp = 10,
@@ -3361,7 +3361,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -3372,7 +3372,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SPARK] =
     {
         .effect = EFFECT_PARALYZE_HIT,
-        .power = 65,
+        .power = 85,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 20,
@@ -3562,7 +3562,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_BURN_HIT,
         .power = 100,
         .type = TYPE_FIRE,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 50,
         .target = MOVE_TARGET_SELECTED,
@@ -3588,11 +3588,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DYNAMIC_PUNCH] =
     {
         .effect = EFFECT_CONFUSE_HIT,
-        .power = 100,
+        .power = 110,
         .type = TYPE_FIGHTING,
-        .accuracy = 50,
+        .accuracy = 75,
         .pp = 5,
-        .secondaryEffectChance = 100,
+        .secondaryEffectChance = 30,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_IRON_FIST_BOOST | FLAG_SHEER_FORCE_BOOST,
@@ -3616,7 +3616,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DRAGON_BREATH] =
     {
         .effect = EFFECT_PARALYZE_HIT,
-        .power = 60,
+        .power = 65,
         .type = TYPE_DRAGON,
         .accuracy = 100,
         .pp = 20,
@@ -3704,9 +3704,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_IRON_TAIL] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
-        .power = 100,
+        .power = 110,
         .type = TYPE_STEEL,
-        .accuracy = 75,
+        .accuracy = 85,
         .pp = 15,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_SELECTED,
@@ -3720,7 +3720,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_ATTACK_UP_HIT,
         .power = 50,
         .type = TYPE_STEEL,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 35,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -3732,7 +3732,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_VITAL_THROW] =
     {
         .effect = EFFECT_VITAL_THROW,
-        .power = 70,
+        .power = 110,
         .type = TYPE_FIGHTING,
         .accuracy = 0,
         .pp = 10,
@@ -3812,7 +3812,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_FIGHTING,
-        .accuracy = 80,
+        .accuracy = 95,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -4019,8 +4019,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_WHIRLPOOL] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .power = 35,
-            .accuracy = 85,
+            .power = 45,
+            .accuracy = 100,
         #else
             .power = 15,
             .accuracy = 70,
@@ -4092,8 +4092,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SOUND,
         .split = SPLIT_SPECIAL,
     },
-
-    [MOVE_STOCKPILE] =
+ [MOVE_STOCKPILE] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
             .pp = 20,
@@ -4131,16 +4130,16 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SWALLOW] =
     {
-        .effect = EFFECT_SWALLOW,
-        .power = 0,
-        .type = TYPE_NORMAL,
+        .effect = EFFECT_PARALYZE_HIT,
+        .power = 75,
+        .type = TYPE_ELECTRIC,
         .accuracy = 0,
         .pp = 10,
-        .secondaryEffectChance = 0,
+        .secondaryEffectChance = 20,
         .target = MOVE_TARGET_USER,
         .priority = 0,
         .flags = FLAG_SNATCH_AFFECTED,
-        .split = SPLIT_STATUS,
+        .split = SPLIT_PHYSICAL,
     },
 
     [MOVE_HEAT_WAVE] =
@@ -4152,7 +4151,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         #endif
         .effect = EFFECT_BURN_HIT,
         .type = TYPE_FIRE,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_BOTH,
@@ -4210,7 +4209,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_WILL_O_WISP] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .accuracy = 85,
+            .accuracy = 90,
         #else
             .accuracy = 75,
         #endif
@@ -4270,12 +4269,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SMELLING_SALTS] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 70,
+            .power = 90,
         #else
             .power = 60,
         #endif
         .effect = EFFECT_SMELLINGSALT,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -4669,7 +4668,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DIVE] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .power = 80,
+            .power = 100,
         #else
             .power = 60,
         #endif
@@ -4719,14 +4718,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_TAIL_GLOW] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .effect = EFFECT_SPECIAL_ATTACK_UP_3,
+            .effect = EFFECT_SPECIAL_ATTACK_UP_2,
         #else
             .effect = EFFECT_SPECIAL_ATTACK_UP_2,
         #endif
         .power = 0,
         .type = TYPE_BUG,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -4805,9 +4804,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_BLAZE_KICK] =
     {
         .effect = EFFECT_BURN_HIT,
-        .power = 85,
+        .power = 90,
         .type = TYPE_FIRE,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -4818,16 +4817,16 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_MUD_SPORT] =
     {
-        .effect = EFFECT_MUD_SPORT,
-        .power = 0,
+        .effect = EFFECT_HIT,
+        .power = 40,
         .type = TYPE_GROUND,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_ALL_BATTLERS,
-        .priority = 0,
+        .priority = 1,
         .flags = 0,
-        .split = SPLIT_STATUS,
+        .split = SPLIT_PHYSICAL,
     },
 
     [MOVE_ICE_BALL] =
@@ -4868,7 +4867,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 10,
+        .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -4898,7 +4897,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .secondaryEffectChance = 30,
         #endif
         .effect = EFFECT_POISON_FANG,
-        .power = 50,
+        .power = 65,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 15,
@@ -4911,9 +4910,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_CRUSH_CLAW] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
-        .power = 75,
+        .power = 100,
         .type = TYPE_NORMAL,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 50,
         .target = MOVE_TARGET_SELECTED,
@@ -4924,8 +4923,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BLAST_BURN] =
     {
-        .effect = EFFECT_RECHARGE,
-        .power = 150,
+        .effect = EFFECT_HIT,
+        .power = 120,
         .type = TYPE_FIRE,
         .accuracy = 90,
         .pp = 5,
@@ -4938,8 +4937,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HYDRO_CANNON] =
     {
-        .effect = EFFECT_RECHARGE,
-        .power = 150,
+        .effect = EFFECT_HIT,
+        .power = 120,
         .type = TYPE_WATER,
         .accuracy = 90,
         .pp = 5,
@@ -4953,8 +4952,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_METEOR_MASH] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 90,
-            .accuracy = 90,
+            .power = 100,
+            .accuracy = 100,
         #else
             .power = 100,
             .accuracy = 85,
@@ -4977,7 +4976,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_DMG_MINIMIZE,
         #endif
         .effect = EFFECT_FLINCH_HIT,
-        .power = 30,
+        .power = 70,
         .type = TYPE_GHOST,
         .accuracy = 100,
         .pp = 15,
@@ -5032,13 +5031,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_AIR_CUTTER] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 60,
+            .power = 80,
         #else
             .power = 55,
         #endif
         .effect = EFFECT_HIT,
         .type = TYPE_FLYING,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 25,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_BOTH,
@@ -5095,7 +5094,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
             .power = 60,
-            .accuracy = 95,
+            .accuracy = 100,
             .pp = 15,
         #else
             .power = 50,
@@ -5252,9 +5251,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SKY_UPPERCUT] =
     {
         .effect = EFFECT_SKY_UPPERCUT,
-        .power = 85,
+        .power = 90,
         .type = TYPE_FIGHTING,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -5266,8 +5265,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SAND_TOMB] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .power = 35,
-            .accuracy = 85,
+            .power = 45,
+            .accuracy = 100,
         #else
             .power = 15,
             .accuracy = 70,
@@ -5305,7 +5304,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         #endif
         .effect = EFFECT_ACCURACY_DOWN_HIT,
         .type = TYPE_WATER,
-        .accuracy = 85,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_BOTH,
@@ -5335,7 +5334,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_AERIAL_ACE] =
     {
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = 80,
         .type = TYPE_FLYING,
         .accuracy = 0,
         .pp = 20,
@@ -5370,7 +5369,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_STEEL,
         .accuracy = 0,
-        .pp = 15,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -5407,7 +5406,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 40,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -5417,7 +5416,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DRAGON_CLAW] =
     {
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 90,
         .type = TYPE_DRAGON,
         .accuracy = 100,
         .pp = 15,
@@ -5430,8 +5429,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FRENZY_PLANT] =
     {
-        .effect = EFFECT_RECHARGE,
-        .power = 150,
+        .effect = EFFECT_HIT,
+        .power = 120,
         .type = TYPE_GRASS,
         .accuracy = 90,
         .pp = 5,
@@ -5448,7 +5447,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_FIGHTING,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -5474,9 +5473,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MUD_SHOT] =
     {
         .effect = EFFECT_SPEED_DOWN_HIT,
-        .power = 55,
+        .power = 75,
         .type = TYPE_GROUND,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -5488,7 +5487,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_POISON_TAIL] =
     {
         .effect = EFFECT_POISON_HIT,
-        .power = 50,
+        .power = 90,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 25,
@@ -5519,7 +5518,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
         #endif
         .effect = EFFECT_THIEF,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FAIRY,
         .accuracy = 100,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -5562,16 +5561,16 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_WATER_SPORT] =
     {
-        .effect = EFFECT_WATER_SPORT,
-        .power = 0,
+        .effect = EFFECT_HIT,
+        .power = 40,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_ALL_BATTLERS,
-        .priority = 0,
+        .priority = 1,
         .flags = 0,
-        .split = SPLIT_STATUS,
+        .split = SPLIT_SPECIAL,
     },
 
     [MOVE_CALM_MIND] =
@@ -5580,7 +5579,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -5612,7 +5611,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_DRAGON,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -5623,7 +5622,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ROCK_BLAST] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_7
-            .accuracy = 90,
+            .accuracy = 100,
             .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_BALLISTIC,
         #elif B_UPDATED_MOVE_DATA == GEN_5 || B_UPDATED_MOVE_DATA == GEN_6
             .accuracy = 90,
@@ -5659,7 +5658,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_WATER_PULSE] =
     {
         #ifdef REBALANCED_VERSION
-            .power = 80,
+            .power = 70,
         #else
             .power = 60,
         #endif
@@ -5713,7 +5712,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_FLYING,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -5756,7 +5755,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_WAKE_UP_SLAP] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 70,
+            .power = 75,
         #else
             .power = 60,
         #endif
@@ -5775,9 +5774,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_HAMMER_ARM] =
     {
         .effect = EFFECT_HAMMER_ARM,
-        .power = 100,
+        .power = 110,
         .type = TYPE_FIGHTING,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -5967,7 +5966,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_PAYBACK] =
     {
         .effect = EFFECT_PAYBACK,
-        .power = 50,
+        .power = 60,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 10,
@@ -6387,7 +6386,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_ROCK,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -6430,7 +6429,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_NIGHT_SLASH] =
     {
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 80,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 15,
@@ -6446,7 +6445,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_WATER,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -6458,7 +6457,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SEED_BOMB] =
     {
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 90,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 15,
@@ -6475,8 +6474,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_FLINCH_HIT,
         .power = 75,
         .type = TYPE_FLYING,
-        .accuracy = 95,
-        .secondaryEffectChance = 30,
+        .accuracy = 100,
+        .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_KEEN_EDGE_BOOST,
@@ -6545,9 +6544,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_FLINCH_HIT,
         .power = 100,
         .type = TYPE_DRAGON,
-        .accuracy = 75,
+        .accuracy = 90,
         .pp = 10,
-        .secondaryEffectChance = 20,
+        .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
@@ -6610,7 +6609,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
         .power = 120,
         .type = TYPE_FIGHTING,
-        .accuracy = 70,
+        .accuracy = 75,
         .pp = 5,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -6681,8 +6680,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_GIGA_IMPACT] =
     {
-        .effect = EFFECT_RECHARGE,
-        .power = 150,
+        .effect = EFFECT_HIT,
+        .power = 120,
         .type = TYPE_NORMAL,
         .accuracy = 90,
         .pp = 5,
@@ -6699,7 +6698,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_DARK,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -6752,7 +6751,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SHADOW_CLAW] =
     {
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 80,
         .type = TYPE_GHOST,
         .accuracy = 100,
         .pp = 15,
@@ -6771,9 +6770,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_STRONG_JAW_BOOST,
         #endif
         .effect = EFFECT_FLINCH_STATUS,
-        .power = 65,
+        .power = 75,
         .type = TYPE_ELECTRIC,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -6790,9 +6789,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_STRONG_JAW_BOOST,
         #endif
         .effect = EFFECT_FLINCH_STATUS,
-        .power = 65,
+        .power = 75,
         .type = TYPE_ICE,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -6809,9 +6808,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_STRONG_JAW_BOOST,
         #endif
         .effect = EFFECT_FLINCH_STATUS,
-        .power = 65,
+        .power = 75,
         .type = TYPE_FIRE,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -6838,13 +6837,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         #ifdef REBALANCED_VERSION
             .pp = 15,
-            .accuracy = 90,
+            .accuracy = 100,
         #else
             .pp = 10,
             .accuracy = 85,
         #endif
         .effect = EFFECT_ACCURACY_DOWN_HIT,
-        .power = 65,
+        .power = 75,
         .type = TYPE_GROUND,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_SELECTED,
@@ -6856,7 +6855,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_PSYCHO_CUT] =
     {
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 80,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 20,
@@ -6872,7 +6871,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_FLINCH_HIT,
         .power = 80,
         .type = TYPE_PSYCHIC,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -6884,9 +6883,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MIRROR_SHOT] =
     {
         .effect = EFFECT_ACCURACY_DOWN_HIT,
-        .power = 65,
+        .power = 75,
         .type = TYPE_STEEL,
-        .accuracy = 85,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_SELECTED,
@@ -6918,7 +6917,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         #endif
         .effect = EFFECT_CONFUSE_HIT,
         .power = 90,
-        .accuracy = 85,
+        .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -7039,8 +7038,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_ROCK_WRECKER] =
     {
-        .effect = EFFECT_RECHARGE,
-        .power = 150,
+        .effect = EFFECT_HIT,
+        .power = 120,
         .type = TYPE_ROCK,
         .accuracy = 90,
         .pp = 5,
@@ -7100,7 +7099,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 15,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
@@ -7123,9 +7122,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_STONE_EDGE] =
     {
         .effect = EFFECT_HIT,
-        .power = 100,
+        .power = 110,
         .type = TYPE_ROCK,
-        .accuracy = 80,
+        .accuracy = 85,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -7233,7 +7232,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_SP_ATTACK_UP_HIT,
         .power = 50,
         .type = TYPE_ELECTRIC,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 70,
         .target = MOVE_TARGET_SELECTED,
@@ -7273,7 +7272,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ATTACK_ORDER] =
     {
         .effect = EFFECT_HIT,
-        .power = 90,
+        .power = 100,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 15,
@@ -7290,7 +7289,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_BUG,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -7317,7 +7316,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_RECOIL_50,
         .power = 150,
         .type = TYPE_ROCK,
-        .accuracy = 80,
+        .accuracy = 90,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -7329,9 +7328,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DOUBLE_HIT] =
     {
         .effect = EFFECT_DOUBLE_HIT,
-        .power = 35,
-        .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .power = 45,
+        .type = TYPE_DARK,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -7493,7 +7492,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_DARK,
         .accuracy = 0,
-        .pp = 15,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -7657,7 +7656,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SMACK_DOWN] =
     {
         .effect = EFFECT_SMACK_DOWN,
-        .power = 50,
+        .power = 75,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 15,
@@ -7689,7 +7688,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FLAME_BURST] =
     {
         .effect = EFFECT_FLAME_BURST,
-        .power = 70,
+        .power = 75,
         .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 15,
@@ -7720,7 +7719,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_BUG,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -7813,7 +7812,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_POISON,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -8019,7 +8018,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         #else
             .effect = EFFECT_BURN_HIT,
         #endif
-        .power = 80,
+        .power = 70,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 15,
@@ -8036,7 +8035,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 15,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -8182,7 +8181,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_RETALIATE,
         .power = 70,
-        .type = TYPE_NORMAL,
+        .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -8361,7 +8360,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_HIT_SWITCH_TARGET,
         .power = 60,
         .type = TYPE_DRAGON,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -8376,7 +8375,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 30,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -8387,9 +8386,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ELECTROWEB] =
     {
         .effect = EFFECT_SPEED_DOWN_HIT,
-        .power = 55,
+        .power = 65,
         .type = TYPE_ELECTRIC,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_BOTH,
@@ -8401,7 +8400,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_WILD_CHARGE] =
     {
         .effect = EFFECT_RECOIL_25,
-        .power = 90,
+        .power = 110,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 15,
@@ -8415,9 +8414,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DRILL_RUN] =
     {
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 85,
         .type = TYPE_GROUND,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -8429,9 +8428,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DUAL_CHOP] =
     {
         .effect = EFFECT_DOUBLE_HIT,
-        .power = 40,
+        .power = 45,
         .type = TYPE_DRAGON,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -8443,8 +8442,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_HEART_STAMP] =
     {
         .effect = EFFECT_FLINCH_HIT,
-        .power = 60,
-        .type = TYPE_PSYCHIC,
+        .power = 75,
+        .type = TYPE_FAIRY,
         .accuracy = 100,
         .pp = 25,
         .secondaryEffectChance = 30,
@@ -8456,7 +8455,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HORN_LEECH] =
     {
-        .power = 75,
+        .power = 80,
         .pp = 15,
         .effect = EFFECT_ABSORB,
         .type = TYPE_GRASS,
@@ -8491,7 +8490,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_DEFENSE_DOWN_HIT,
         .power = 75,
         .type = TYPE_WATER,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 50,
         .target = MOVE_TARGET_SELECTED,
@@ -8523,7 +8522,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_ACCURACY_DOWN_HIT,
         .power = 65,
         .type = TYPE_GRASS,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 50,
         .target = MOVE_TARGET_SELECTED,
@@ -8535,11 +8534,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_STEAMROLLER] =
     {
         .effect = EFFECT_FLINCH_HIT,
-        .power = 65,
+        .power = 100,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 20,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
@@ -8552,7 +8551,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_GRASS,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -8563,9 +8562,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_NIGHT_DAZE] =
     {
         .effect = EFFECT_ACCURACY_DOWN_HIT,
-        .power = 85,
+        .power = 90,
         .type = TYPE_DARK,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 40,
         .target = MOVE_TARGET_SELECTED,
@@ -8727,7 +8726,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         #endif
         .effect = EFFECT_SPEED_DOWN_HIT,
         .type = TYPE_ICE,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_BOTH,
@@ -8780,10 +8779,10 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FREEZE_SHOCK] =
     {
-        .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = 140,
+        .effect = EFFECT_HIT,
+        .power = 70,
         .type = TYPE_ICE,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_SELECTED,
@@ -8795,10 +8794,10 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_ICE_BURN] =
     {
-        .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = 140,
+        .effect = EFFECT_HIT,
+        .power = 70,
         .type = TYPE_ICE,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_SELECTED,
@@ -8813,7 +8812,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
         .power = 55,
         .type = TYPE_DARK,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_BOTH,
@@ -8827,9 +8826,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_FLINCH_HIT,
         .power = 85,
         .type = TYPE_ICE,
-        .accuracy = 90,
+        .accuracy = 95,
         .pp = 10,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_SHEER_FORCE_BOOST,
@@ -9037,9 +9036,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_PARABOLIC_CHARGE] =
     {
         #ifdef REBALANCED_VERSION
-            .power = 90,
+            .power = 75,
             .pp = 10,
-            .argument = 25, // Restores 25% HP instead of 50
+            .argument = 50, // Restores 25% HP instead of 50
         #else
             .power = 65,
             .pp = 20,
@@ -9249,7 +9248,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_ATTACK_DOWN_HIT,
         .power = 90,
         .type = TYPE_FAIRY,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -9275,7 +9274,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MOONBLAST] =
     {
         .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
-        .power = 95,
+        .power = 90,
         .type = TYPE_FAIRY,
         .accuracy = 100,
         .pp = 15,
@@ -9379,7 +9378,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_SCALD,
         .power = 110,
         .type = TYPE_WATER,
-        .accuracy = 95,
+        .accuracy = 90,
         .pp = 5,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_SELECTED,
@@ -9423,7 +9422,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MYSTICAL_FIRE] =
     {
         #ifdef REBALANCED_VERSION
-            .power = 85,
+            .power = 75,
         #else
             .power = 75,
         #endif
@@ -9668,7 +9667,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 40,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
-        .pp = 20,
+        .pp = 2,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -9903,9 +9902,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ICE_HAMMER] =
     {
         .effect = EFFECT_HAMMER_ARM,
-        .power = 100,
+        .power = 110,
         .type = TYPE_ICE,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -9920,7 +9919,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 0,
         .type = TYPE_FAIRY,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -9933,7 +9932,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_HIT,
         .power = 95,
         .type = TYPE_GROUND,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -10169,7 +10168,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SMART_STRIKE] =
     {
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 80,
         .type = TYPE_STEEL,
         .accuracy = 0,
         .pp = 10,
@@ -10225,7 +10224,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_TROP_KICK] =
     {
         .effect = EFFECT_ATTACK_DOWN_HIT,
-        .power = 70,
+        .power = 85,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 15,
@@ -10411,7 +10410,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_LIQUIDATION] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
-        .power = 85,
+        .power = 90,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 10,
@@ -10439,9 +10438,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SPECTRAL_THIEF] =
     {
         .effect = EFFECT_SPECTRAL_THIEF,
-        .power = 90,
+        .power = 80,
         .type = TYPE_GHOST,
-        .accuracy = 100,
+        .accuracy = 90,
         .pp = 10,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -10499,7 +10498,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 10,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
@@ -10511,7 +10510,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_SUPER_FANG,
         .power = 1,
         .type = TYPE_FAIRY,
-        .accuracy = 90,
+        .accuracy = 95,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -10846,7 +10845,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 5,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
@@ -11250,7 +11249,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_CONFUSE_HIT,
         .power = 90,
         .type = TYPE_FAIRY,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -11416,7 +11415,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MISTY_EXPLOSION] =
     {
         .effect = EFFECT_EXPLOSION,
-        .power = 100,
+        .power = 250,
         .type = TYPE_FAIRY,
         .accuracy = 100,
         .pp = 5,
@@ -11472,9 +11471,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SKITTER_SMACK] =
     {
         .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
-        .power = 70,
+        .power = 80,
         .type = TYPE_BUG,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -11528,7 +11527,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_CORROSIVE_GAS] =
     {
         .effect = EFFECT_PLACEHOLDER,   //TODO
-        .power = 0,
+        .power = 75,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 40,
@@ -11584,9 +11583,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DUAL_WINGBEAT] =
     {
         .effect = EFFECT_DOUBLE_HIT,
-        .power = 40,
+        .power = 45,
         .type = TYPE_FLYING,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -11628,7 +11627,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 80,
         .type = TYPE_DARK,
         .accuracy = 100,
-        .pp = 5,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -11642,7 +11641,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 25,
         .type = TYPE_WATER,
         .accuracy = 100,
-        .pp = 5,
+        .pp = 2,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -11709,7 +11708,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_THUNDEROUS_KICK] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
-        .power = 90,
+        .power = 100,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 10,
@@ -11760,5 +11759,19 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_SOUND,
         .split = SPLIT_SPECIAL,
+    },
+
+    [MOVE_WAVE_CRASH] =
+    {
+        .effect = EFFECT_RECOIL_25,
+        .power = 110,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+        .split = SPLIT_PHYSICAL,
     },
 };
