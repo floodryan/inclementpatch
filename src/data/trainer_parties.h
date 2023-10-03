@@ -1422,14 +1422,33 @@ static const struct TrainerMonItemCustomMoves sParty_Archie1[] = { // Slateport
 
 static const struct TrainerMonItemCustomMoves sParty_Calvin1[] = {
     {
-    .lvl = -2,
+    .lvl = 0,
     .species = SPECIES_POOCHYENA,
-    .moves = MOVE_HOWL, MOVE_TACKLE
+    .heldItem = ITEM_ORAN_BERRY,
+    .ability = 2, // Dazzling
+    .moves = MOVE_HOWL, MOVE_TACKLE, MOVE_BITE, MOVE_SNARL
     },
     {
-    .lvl = -2,
+    .lvl = 0,
+    .species = SPECIES_GROWLITHE,
+    .heldItem = ITEM_ORAN_BERRY,
+    .ability = 1, // Intimidate
+    .spread = SPREAD_25_IV_0_EV,
+    .moves = MOVE_EMBER, MOVE_HOWL, MOVE_BITE, MOVE_REVERSAL
+    },
+    {
+    .lvl = 0,
     .species = SPECIES_LILLIPUP,
-    .moves = MOVE_LEER, MOVE_TACKLE, MOVE_ODOR_SLEUTH
+    .heldItem = ITEM_ORAN_BERRY,
+    .ability = 1, // Intimidate
+    .moves = MOVE_WORK_UP, MOVE_HEADBUTT, MOVE_BITE, MOVE_STOMP
+    },
+    {
+     .lvl = 0,
+    .species = SPECIES_YAMPER,
+    .heldItem = ITEM_ORAN_BERRY,
+    .ability = 1, // FLUFFY
+    .moves = MOVE_NUZZLE, MOVE_ICE_FANG, MOVE_THUNDER_FANG, MOVE_ROAR
     }
 };
 
@@ -1521,33 +1540,48 @@ static const struct TrainerMonItemCustomMoves sParty_Calvin4[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Rick[] = {
     {
-    .lvl = -4,
-    .species = SPECIES_WURMPLE,
-    .moves = MOVE_STRING_SHOT, MOVE_POISON_STING
+    .lvl = 0,
+    .species = SPECIES_CASCOON,
+    .moves = MOVE_IRON_DEFENSE, MOVE_BODY_PRESS
     },
     {
-    .lvl = -4,
+    .lvl = 0,
     .species = SPECIES_SEWADDLE,
-    .moves = MOVE_STRING_SHOT, MOVE_TACKLE
+    .moves = MOVE_STICKY_WEB, MOVE_BUG_BITE, MOVE_RAZOR_LEAF, MOVE_GROWTH
     },
     {
-    .lvl = -4,
+    .lvl = 0,
     .species = SPECIES_GRUBBIN,
-    .moves = MOVE_STRING_SHOT, MOVE_VISE_GRIP
+    .moves = MOVE_MUD_SHOT, MOVE_MUD_SLAP, MOVE_SPARK, MOVE_BUG_BITE
+    },
+    {
+    .lvl = 0,
+    .species = SPECIES_DWEBBLE,
+    .moves = MOVE_ROCK_THROW, MOVE_FURY_CUTTER, MOVE_FEINT_ATTACK, MOVE_ROCK_POLISH
     }
-    
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Allen[] = {
     {
-    .lvl = -4,
+    .lvl = 0,
     .species = SPECIES_ZIGZAGOON,
-    .moves = MOVE_TACKLE, MOVE_GROWL, MOVE_TAIL_WHIP
+    .heldItem = ITEM_SALAC_BERRY,
+    .ability = 1, // Gluttony
+    .moves = MOVE_HEADBUTT, MOVE_DEFENSE_CURL, MOVE_QUICK_ATTACK, MOVE_BITE
     },
     {
-    .lvl = -4,
+    .lvl = 0,
     .species = SPECIES_TAILLOW,
-    .moves = MOVE_QUICK_ATTACK, MOVE_GROWL, MOVE_RAGE
+    .heldItem = ITEM_SALAC_BERRY,
+    .ability = 2, // SCRAPPY
+    .moves = MOVE_QUICK_ATTACK, MOVE_GROWL, MOVE_DISARMING_VOICE, MOVE_SWIFT
+    },
+    {
+    .lvl = 0,
+    .species = SPECIES_ZIGZAGOON_GALARIAN,
+    .heldItem = ITEM_TOXIC_ORB,
+    .ability = 2, // QUICK_FEET
+    .moves = MOVE_QUICK_ATTACK, MOVE_PIN_MISSILE, MOVE_DISARMING_VOICE, MOVE_SWIFT
     }
 };
 

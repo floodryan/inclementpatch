@@ -2937,14 +2937,12 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_WEEZING] =
     {
         .baseHP        = 85,
-        .baseAttack    = 70,
+        .baseAttack    = 50,
         .baseDefense   = 130,
         .baseSpeed     = 40,
-        .baseSpDefense = 80,
+        .baseSpDefense = 70,
         #ifdef REBALANCED_VERSION
             .baseSpAttack  = 95,
-        #else
-            .baseSpAttack  = 85,
         #endif
         .type1 = TYPE_POISON,
         .type2 = TYPE_POISON,
@@ -3453,12 +3451,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_GYARADOS] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 100,
-        .baseDefense   = 60,
+        .baseHP        = 85,
+        .baseAttack    = 115,
+        .baseDefense   = 80,
         .baseSpeed     = 81,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 80,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 100,
         .type1 = TYPE_WATER,
         .type2 = TYPE_FLYING,
         .catchRate = 45,
@@ -5227,7 +5225,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_DAMP, ABILITY_WATER_ABSORB, ABILITY_UNAWARE},
+        .abilities = {ABILITY_UNAWARE, ABILITY_WATER_ABSORB, ABILITY_UNAWARE},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -5391,8 +5389,8 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_WOBBUFFET] =
     {
         .baseHP        = 95,
-        .baseAttack    = 75,
-        .baseDefense   = 80,
+        .baseAttack    = 70,
+        .baseDefense   = 70,
         .baseSpeed     = 33,
         .baseSpAttack  = 110,
         .baseSpDefense = 100,
@@ -5419,7 +5417,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpDefense = 110,
         #ifdef REBALANCED_VERSION
             .baseAttack    = 90,
-            .baseSpeed     = 105,
+            .baseSpeed     = 90,
             .baseSpAttack  = 100,
             .abilities = {ABILITY_STRONG_JAW, ABILITY_CONTRARY, ABILITY_DAZZLING},
         #else
@@ -5695,7 +5693,7 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_SHUCKLE] =
     {
-        .baseHP        = 20,
+        .baseHP        = 30,
         .baseAttack    = 10,
         .baseDefense   = 230,
         .baseSpeed     = 5,
@@ -6065,7 +6063,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_1,
-        .abilities = {ABILITY_STEAM_ENGINE, ABILITY_WATER_ABSORB, ABILITY_WATER_BUBBLE},
+        .abilities = {ABILITY_SHED_SKIN, ABILITY_WATER_COMPACTION, ABILITY_WATER_BUBBLE},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
@@ -6206,7 +6204,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 60,
         #ifdef REBALANCED_VERSION
-            .baseAttack    = 130,
+            .baseAttack    = 125,
             .baseDefense   = 130,
         #else
             .baseAttack    = 120,
@@ -6442,7 +6440,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 75,
         #ifdef REBALANCED_VERSION
-            .baseAttack    = 115,
+            .baseAttack    = 100,
         #else
             .baseAttack    = 100,
         #endif
@@ -7143,7 +7141,7 @@ const struct BaseStats gBaseStats[] =
         .baseHP        = 70,
         #ifdef REBALANCED_VERSION
             .baseAttack    = 50,
-            .baseDefense   = 50,
+            .baseDefense   = 40,
             .baseSpeed     = 125,
             .baseSpDefense = 70,
             .baseSpAttack  = 100,
@@ -7401,7 +7399,7 @@ const struct BaseStats gBaseStats[] =
         .baseAttack    = 55,
         .baseDefense   = 30,
         .baseSpeed     = 85,
-        .baseSpAttack  = 30,
+        .baseSpAttack  = 55,
         .baseSpDefense = 30,
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_FLYING,
@@ -7422,7 +7420,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_SWELLOW] =
     {
         .baseHP        = 60,
-        .baseAttack    = 95,
+        .baseAttack    = 90,
         .baseDefense   = 60,
         .baseSpeed     = 125,
         .baseSpDefense = 50,
@@ -7551,7 +7549,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpDefense = 115,
         #ifdef REBALANCED_VERSION
             .baseAttack    = 60,
-            .baseSpeed     = 100,
+            .baseSpeed     = 80,
         #else
             .baseAttack    = 65,
             .baseSpeed     = 80,
@@ -7622,7 +7620,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_BUG,
-        .abilities = {ABILITY_INTIMIDATE, ABILITY_INTIMIDATE, ABILITY_UNNERVE},
+        .abilities = {ABILITY_INTIMIDATE, ABILITY_UNNERVE, ABILITY_UNNERVE},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -7797,7 +7795,7 @@ const struct BaseStats gBaseStats[] =
             .baseAttack    = 90,
         #endif
         .type1 = TYPE_BUG,
-        .type2 = TYPE_FLYING,
+        .type2 = TYPE_DARK,
         .catchRate = 120,
         .expYield = 160,
         .evYield_Speed     = 2,
@@ -7893,7 +7891,7 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 109,
         .baseAttack    = 91,
-        .baseDefense   = 77,
+        .baseDefense   = 67,
         .baseSpeed     = 48,
         #ifdef REBALANCED_VERSION
             .baseSpAttack  = 108,
@@ -7949,9 +7947,9 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 50,
         .baseSpAttack  = 40,
         #ifdef REBALANCED_VERSION
-            .baseAttack    = 130,
+            .baseAttack    = 120,
             .baseDefense   = 80,
-            .baseSpDefense = 70,
+            .baseSpDefense = 60,
         #else
             .baseAttack    = 120,
             .baseDefense   = 60,
@@ -8115,7 +8113,7 @@ const struct BaseStats gBaseStats[] =
         .baseAttack    = 110,
         .baseSpeed     = 50,
         .baseSpAttack  = 55,
-        .baseSpDefense = 85,
+        .baseSpDefense = 70,
         #ifdef REBALANCED_VERSION
             .baseHP        = 85,
             .baseDefense   = 125,
@@ -8197,7 +8195,7 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 80,
         .baseAttack    = 110,
-        .baseDefense   = 180,
+        .baseDefense   = 170,
         .baseSpeed     = 50,
         .baseSpAttack  = 60,
         .baseSpDefense = 60,
@@ -8384,10 +8382,10 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 85,
         .baseAttack    = 43,
-        .baseSpAttack  = 99,
-        .baseSpDefense = 99,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 90,
         #ifdef REBALANCED_VERSION
-            .baseDefense   = 75,
+            .baseDefense   = 55,
             .baseSpeed     = 135,
             .type1 = TYPE_BUG,
             .type2 = TYPE_ELECTRIC,
@@ -8407,7 +8405,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FAST,
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = {ABILITY_ILLUMINATE, ABILITY_SWARM, ABILITY_PRANKSTER},
+        .abilities = {ABILITY_PRANKSTER, ABILITY_SWARM, ABILITY_OBLIVIOUS},
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
@@ -8416,10 +8414,10 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 75,
         .baseAttack    = 47,
-        .baseDefense   = 75,
-        .baseSpDefense = 99,
+        .baseDefense   = 55,
+        .baseSpDefense = 90,
         #ifdef REBALANCED_VERSION
-            .baseSpAttack  = 99,
+            .baseSpAttack  = 90,
             .baseSpeed     = 135,
             .type1 = TYPE_BUG,
             .type2 = TYPE_FAIRY,
@@ -8439,7 +8437,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FAST,
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = {ABILITY_OBLIVIOUS, ABILITY_TINTED_LENS, ABILITY_PRANKSTER},
+        .abilities = {ABILITY_PRANKSTER, ABILITY_TINTED_LENS, ABILITY_OBLIVIOUS},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
@@ -10200,7 +10198,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
-        .abilities = {ABILITY_CLEAR_BODY, ABILITY_CLEAR_BODY, ABILITY_STURDY},
+        .abilities = {ABILITY_CLEAR_BODY, ABILITY_IMMUNITY, ABILITY_STURDY},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
     },
@@ -10224,7 +10222,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
-        .abilities = {ABILITY_CLEAR_BODY, ABILITY_CLEAR_BODY, ABILITY_ICE_BODY},
+        .abilities = {ABILITY_CLEAR_BODY, ABILITY_LIGHTNING_ROD, ABILITY_ICE_BODY},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -10232,10 +10230,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_REGISTEEL] =
     {
         .baseHP        = 80,
-        .baseAttack    = 75,
+        .baseAttack    = 100,
         .baseDefense   = 150,
         .baseSpeed     = 50,
-        .baseSpAttack  = 75,
+        .baseSpAttack  = 50,
         .baseSpDefense = 150,
         .type1 = TYPE_STEEL,
         .type2 = TYPE_STEEL,
@@ -10249,7 +10247,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
-        .abilities = {ABILITY_CLEAR_BODY, ABILITY_CLEAR_BODY, ABILITY_LIGHT_METAL},
+        .abilities = {ABILITY_CLEAR_BODY, ABILITY_HEATPROOF, ABILITY_LIGHT_METAL},
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
@@ -10488,8 +10486,8 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 95,
         .baseAttack    = 111,
-        .baseSpeed     = 56,
-        .baseSpAttack  = 75,
+        .baseSpeed     = 40,
+        .baseSpAttack  = 90,
         .baseSpDefense = 75,
         #ifdef REBALANCED_VERSION
             .baseDefense   = 114,
@@ -10596,7 +10594,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         #ifdef REBALANCED_VERSION
-            .abilities = {ABILITY_BLAZE, ABILITY_IRON_FIST, ABILITY_MOXIE},
+            .abilities = {ABILITY_BLAZE, ABILITY_IRON_FIST, ABILITY_POWER_FISTS},
         #else
             .abilities = {ABILITY_BLAZE, ABILITY_BLAZE, ABILITY_IRON_FIST},
         #endif
@@ -10755,7 +10753,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
-        .abilities = {ABILITY_INTIMIDATE, ABILITY_INTIMIDATE, ABILITY_RECKLESS},
+        .abilities = {ABILITY_INTIMIDATE, ABILITY_RECKLESS, ABILITY_RECKLESS},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
@@ -10851,7 +10849,7 @@ const struct BaseStats gBaseStats[] =
         #ifdef REBALANCED_VERSION
             .baseAttack    = 100,
             .baseSpeed     = 125,
-            .baseSpAttack  = 100,
+            .baseSpAttack  = 90,
             .type1 = TYPE_BUG,
             .type2 = TYPE_NORMAL, 
         #else
@@ -10871,7 +10869,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FAST,
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
-        .abilities = {ABILITY_PUNK_ROCK, ABILITY_SWARM, ABILITY_TECHNICIAN},
+        .abilities = {ABILITY_PUNK_ROCK, ABILITY_TECHNICIAN, ABILITY_SWARM},
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
@@ -10989,9 +10987,9 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 60,
         .baseAttack    = 70,
-        .baseSpeed     = 100,
+        .baseSpeed     = 90,
         .baseSpAttack  = 125,
-        .baseSpDefense = 105,
+        .baseSpDefense = 100,
         .baseDefense   = 65,
         .type1 = TYPE_GRASS,
         .type2 = TYPE_POISON,
@@ -11040,13 +11038,13 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_RAMPARDOS] =
     {
-        .baseHP        = 58,
+        .baseHP        = 80,
         .baseAttack    = 165,
         .baseSpeed     = 97,
         .baseSpAttack  = 65,
         .baseSpDefense = 50,
         #ifdef REBALANCED_VERSION
-            .baseDefense   = 80,
+            .baseDefense   = 60,
             .abilities = {ABILITY_MOLD_BREAKER, ABILITY_RAMPAGE, ABILITY_SHEER_FORCE},
         #else
             .baseDefense   = 60,
@@ -11099,7 +11097,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 47,
         .baseSpDefense = 138,
         #ifdef REBALANCED_VERSION
-            .baseHP        = 80,
+            .baseHP        = 60,
         #else
             .baseHP        = 60,
         #endif
@@ -11114,7 +11112,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FAST,
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_MONSTER,
-        .abilities = {ABILITY_DAUNTLESS_SHIELD, ABILITY_STURDY, ABILITY_SOUNDPROOF},
+        .abilities = {ABILITY_DAUNTLESS_SHIELD, ABILITY_BULLETPROOF, ABILITY_SOUNDPROOF},
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
@@ -11180,7 +11178,7 @@ const struct BaseStats gBaseStats[] =
         #ifdef REBALANCED_VERSION
             .baseAttack    = 100,
             .baseDefense   = 70,
-            .baseSpeed     = 125,
+            .baseSpeed     = 130,
             .baseSpDefense = 70,
         #else
             .baseAttack    = 94,
@@ -11201,7 +11199,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FAST,
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
-        .abilities = {ABILITY_SWARM, ABILITY_DANCER, ABILITY_TINTED_LENS},
+        .abilities = {ABILITY_SWARM, ABILITY_TINTED_LENS, ABILITY_TINTED_LENS},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -11347,7 +11345,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_TECHNICIAN, ABILITY_WATER_VEIL},
+        .abilities = {ABILITY_PROPELLER_TAIL, ABILITY_TECHNICIAN, ABILITY_WATER_VEIL},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
@@ -11440,7 +11438,7 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_GASTRODON] =
     {
-        .baseHP        = 130,
+        .baseHP        = 120,
         .baseAttack    = 60,
         .baseDefense   = 88,
         .baseSpeed     = 39,
@@ -11571,14 +11569,14 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 75,
         .baseDefense   = 70,
-        .baseSpeed     = 120,
+        .baseSpeed     = 115,
         .baseSpAttack  = 54,
-        .baseSpDefense = 94,
+        .baseSpDefense = 110,
         #ifdef REBALANCED_VERSION
-            .baseAttack    = 105,
+            .baseAttack    = 100,
             .type1 = TYPE_NORMAL,
             .type2 = TYPE_FIGHTING,
-            .abilities = {ABILITY_CUTE_CHARM, ABILITY_SCRAPPY, ABILITY_LIMBER},
+            .abilities = {ABILITY_CUTE_CHARM, ABILITY_LIMBER, ABILITY_SOUNDPROOF},
         #else
             .baseAttack    = 76,
             .type1 = TYPE_NORMAL,
@@ -11609,7 +11607,7 @@ const struct BaseStats gBaseStats[] =
             .baseSpDefense = 115,
             .type1 = TYPE_GHOST,
             .type2 = TYPE_FAIRY,
-            .abilities = {ABILITY_LEVITATE, ABILITY_MAGICIAN, ABILITY_PIXILATE},
+            .abilities = {ABILITY_LEVITATE, ABILITY_RATTLED, ABILITY_MAGICIAN},
         #else
             .baseSpeed     = 105,
             .baseSpAttack  = 105,
@@ -11634,11 +11632,11 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_HONCHKROW] =
     {
-        .baseHP        = 100,
+        .baseHP        = 90,
         .baseAttack    = 125,
         .baseDefense   = 60,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 71,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 88,
         .baseSpDefense = 52,
         .type1 = TYPE_DARK,
         .type2 = TYPE_FLYING,
@@ -11651,7 +11649,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
-        .abilities = {ABILITY_INSOMNIA, ABILITY_SUPER_LUCK, ABILITY_MOXIE},
+        .abilities = {ABILITY_MOXIE, ABILITY_SUPER_LUCK, ABILITY_MOXIE},
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
@@ -11664,8 +11662,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 42,
         .baseSpDefense = 37,
-        .type1 = TYPE_NORMAL,
-        .type2 = TYPE_NORMAL,
+        .type1 = TYPE_FAIRY,
+        .type2 = TYPE_DARK,
         .catchRate = 190,
         .expYield = 62,
         .evYield_Speed     = 1,
@@ -11695,8 +11693,8 @@ const struct BaseStats gBaseStats[] =
             .baseSpeed     = 112,
             .baseSpDefense = 59,
         #endif
-        .type1 = TYPE_NORMAL,
-        .type2 = TYPE_DARK,
+        .type1 = TYPE_DARK,
+        .type2 = TYPE_FAIRY,
         .catchRate = 75,
         .expYield = 158,
         .evYield_Speed     = 2,
@@ -11706,7 +11704,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_TOUGH_CLAWS, ABILITY_OWN_TEMPO, ABILITY_DEFIANT},
+        .abilities = {ABILITY_TOUGH_CLAWS, ABILITY_DEFIANT, ABILITY_OWN_TEMPO},
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
@@ -11808,7 +11806,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
-        .abilities = {ABILITY_LEVITATE, ABILITY_HEATPROOF, ABILITY_HEAVY_METAL},
+        .abilities = {ABILITY_LEVITATE, ABILITY_HEATPROOF, ABILITY_DRIZZLE},
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
@@ -11816,10 +11814,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_BRONZONG] =
     {
         .baseHP        = 80,
-        .baseAttack    = 89,
+        .baseAttack    = 83,
         .baseDefense   = 120,
         .baseSpeed     = 33,
-        .baseSpAttack  = 79,
+        .baseSpAttack  = 83,
         .baseSpDefense = 120,
         .type1 = TYPE_STEEL,
         .type2 = TYPE_PSYCHIC,
@@ -11834,7 +11832,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
-        .abilities = {ABILITY_LEVITATE, ABILITY_HEATPROOF, ABILITY_HEAVY_METAL},
+        .abilities = {ABILITY_LEVITATE, ABILITY_HEATPROOF, ABILITY_DRIZZLE},
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
@@ -12193,7 +12191,7 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_DRAPION] =
     {
-        .baseHP        = 90,
+        .baseHP        = 80,
         .baseSpeed     = 60,
         .baseSpAttack  = 60,
         .baseSpDefense = 75,
@@ -12216,7 +12214,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_WATER_3,
-        .abilities = {ABILITY_BATTLE_ARMOR, ABILITY_SNIPER, ABILITY_CORROSION},
+        .abilities = {ABILITY_BATTLE_ARMOR, ABILITY_SNIPER, ABILITY_STRONG_JAW},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
@@ -13668,7 +13666,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_PICKUP, ABILITY_RUN_AWAY},
+        .abilities = {ABILITY_INTIMIDATE, ABILITY_PICKUP, ABILITY_RUN_AWAY},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
@@ -15090,7 +15088,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_SCRAFTY] =
     {
         .baseHP        = 80,
-        .baseAttack    = 105,
+        .baseAttack    = 90,
         .baseDefense   = 115,
         .baseSpeed     = 58,
         .baseSpAttack  = 45,
@@ -18293,7 +18291,7 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_AROMATISSE] =
     {
-        .baseHP        = 121,
+        .baseHP        = 106,
         .baseAttack    = 62,
         .baseDefense   = 72,
         .baseSpeed     = 29,
@@ -19877,12 +19875,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_RIBOMBEE] =
     {
-        .baseHP        = 70,
+        .baseHP        = 75,
         .baseAttack    = 55,
         .baseDefense   = 60,
         .baseSpeed     = 124,
-        .baseSpAttack  = 105,
-        .baseSpDefense = 105,
+        .baseSpAttack  = 111,
+        .baseSpDefense = 99,
         .type1 = TYPE_BUG,
         .type2 = TYPE_FAIRY,
         .catchRate = 75,
@@ -20223,9 +20221,9 @@ const struct BaseStats gBaseStats[] =
         .baseDefense   = 75,
         .baseSpeed     = 30,
         #ifdef REBALANCED_VERSION
-            .baseHP        = 90,
+            .baseHP        = 80,
             .baseSpAttack  = 100,
-            .baseSpDefense = 125,
+            .baseSpDefense = 135,
         #else
             .baseHP        = 60,
             .baseSpAttack  = 90,
@@ -22222,7 +22220,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_YAMPER] =
     {
         .baseHP        = 59,
-        .baseAttack    = 45,
+        .baseAttack    = 65,
         .baseDefense   = 50,
         .baseSpeed     = 26,
         .baseSpAttack  = 40,
@@ -22238,7 +22236,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_BALL_FETCH, ABILITY_NONE, ABILITY_RATTLED},
+        .abilities = {ABILITY_FLUFFY, ABILITY_NONE, ABILITY_RATTLED},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -24040,12 +24038,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_GYARADOS_MEGA] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 40,
-        .baseDefense   = 60,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 50,
+        .baseHP        = 85,
+        .baseAttack    = 155,
+        .baseDefense   = 109,
+        .baseSpeed     = 81,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 120,
         .type1 = TYPE_WATER,
         .type2 = TYPE_DARK,
         .catchRate = 45,
