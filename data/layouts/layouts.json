@@ -1226,7 +1226,7 @@
       "name": "Route117_PokemonDayCare_Layout",
       "width": 12,
       "height": 9,
-      "primary_tileset": "gTileset_Building",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_PokemonDayCare",
       "border_filepath": "data/layouts/Route117_PokemonDayCare/border.bin",
       "blockdata_filepath": "data/layouts/Route117_PokemonDayCare/map.bin"

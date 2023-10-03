@@ -1222,8 +1222,7 @@ static const u8 sBlazeKickDescription[] = _(
     "hit ratio. May cause a burn.");
 
 static const u8 sMudSportDescription[] = _(
-    "Covers the user in mud to\n"
-    "raise electrical resistance.");
+    "Physical ground priority.");
 
 static const u8 sIceBallDescription[] = _(
     "A 5-turn attack that gains\n"
@@ -1250,20 +1249,17 @@ static const u8 sCrushClawDescription[] = _(
     "claws. May lower Defense.");
 
 static const u8 sBlastBurnDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "Powerful fire move. 1 PP");
 
 static const u8 sHydroCannonDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "Powerful water move. 1 PP.");
 
 static const u8 sMeteorMashDescription[] = _(
     "Fires a meteor-like punch.\n"
-    "May raise Attack.");
+    "may raise attack.");
 
 static const u8 sAstonishDescription[] = _(
-    "An attack that may shock\n"
-    "the foe into flinching.");
+    "Fake Out effect.");
 
 static const u8 sWeatherBallDescription[] = _(
     "The move's type and power\n"
@@ -1406,8 +1402,7 @@ static const u8 sMagicalLeafDescription[] = _(
     "that cannot be evaded.");
 
 static const u8 sWaterSportDescription[] = _(
-    "The user becomes soaked to\n"
-    "raise resistance to fire.");
+    "Prioirty Special Water Move.");
 
 static const u8 sCalmMindDescription[] = _(
     "Raises Sp. Atk and Sp. Def\n"
@@ -2877,8 +2872,8 @@ static const u8 sSCALE_SHOTDescription[] = _(
     "Ups Speed, lowers defense.");
 
 static const u8 sMETEOR_BEAMDescription[] = _(
-    "A 2-turn move that raises\n"
-    "Sp. Attack before attacking.");
+    "A 2-turn move.\n"
+    "Guarenteed flinch on 2nd turn.");
 
 static const u8 sSHELL_SIDE_ARMDescription[] = _(
     "Deals better of physical and\n"
@@ -2893,8 +2888,8 @@ static const u8 sGRASSY_GLIDEDescription[] = _(
     "first on Grassy Terrain.");
 
 static const u8 sRISING_VOLTAGEDescription[] = _(
-    "This move's power doubles\n"
-    "when on Electric Terrain.");
+    "Two turn attack.\n"
+    "Guarenteed paralysis turn 2.");
 
 static const u8 sTERRAIN_PULSEDescription[] = _(
     "Type and power changes\n"
@@ -2984,12 +2979,79 @@ static const u8 sEERIE_SPELLDescription[] = _(
     "Attacks with psychic power.\n"
     "Foe's last move has 3 PP cut.");
 
-static const u8 sNotDoneYetDescription[] = _(
-    "Not done yet.");
-
 static const u8 sWAVE_CRASHDescription[] = _(
     "Crashes The foe with force.");
 
+static const u8 sEARTH_SHOTDescription[] = _(
+    "Slugs earth quicky." 
+     "Priority +1");
+
+static const u8 sMIDAS_TOUCHDescription[] = _(
+   "Sneaky pressure point stab.\n"
+    "30% paralyze chance.");
+
+static const u8 sHEADLONG_RUSHDescription[] = _(
+    "Devistating quake of power."
+    "Close Combat effect");
+
+static const u8 sDRACO_BURSTescription[] = _(
+    "Sharp hit of dragon energy.-\n"
+    "Always Crits.");
+
+static const u8 sTWIN_BEAMDescription[] = _(
+    "Dual psychic slam.");
+
+static const u8 sOVERCHARGEDescription[] = _(
+    "Electric burn out." 
+    "2 Spattk after use.");
+
+static const u8 sROCK_SLINGDescription[] = _(
+   "Magnetic rock toss."
+   "Shell side arm effect.");
+
+static const u8 sVENOM_TUGDescription[] = _(
+    "Quick whip of poison. Spdef"
+    "lowered on hit. Priority +1.");
+
+static const u8 sSTEELSURGEDescription[] = _(
+    "Combustion of Metalic Core.-\n"
+    "Overheat effect.");
+
+static const u8 sAQUA_FANGDescription[] = _(
+    "Aqua Bite");
+
+static const u8 sDEMON_DRAINDescription[] = _(
+    "Vampire Bite. 50% Drain.");
+
+static const u8 sVENOM_DRAINDescription[] = _(
+    "Poison Drain. 50% Drain.");
+
+static const u8 sPRESSURICEDescription[] = _(
+    "Forces Breakdown of Defenses.");
+
+static const u8 sFROST_DRAINDescription[] = _(
+    "Ice Drain. 50% Drain.");
+
+static const u8 sPOISON_TAPDescription[] = _(
+    "Fake Out effect.");
+
+static const u8 sSTEAM_SWAPDescription[] = _(
+    "Special switch move.");
+
+static const u8 sHEARTBREAKERDescription[] = _(
+    "Ghost type revenge.");
+
+static const u8 sWASP_SNIPEDescription[] = _(
+    "Auto-Crit bug move.");
+
+static const u8 sPOLLEN_PERFORATEDescription[] = _(
+    "Bug type Hex.");
+
+static const u8 sNIGHTMARE_PULLDescription[] = _(
+    "Ghost attack, lowers speed by two.");
+
+static const u8 sHEARTH_ROBBERYDescription[] = _(
+    "Drains by 75%.");
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
@@ -3751,4 +3813,23 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ASTRAL_BARRAGE - 1] = sASTRAL_BARRAGEDescription,
     [MOVE_EERIE_SPELL - 1] = sEERIE_SPELLDescription,
     [MOVE_WAVE_CRASH - 1] = sWAVE_CRASHDescription,
+    [MOVE_EARTH_SHOT - 1] = sEARTH_SHOTDescription,
+    [MOVE_MIDAS_TOUCH - 1] = sMIDAS_TOUCHDescription,
+    [MOVE_DRACO_BURST - 1] = sDRACO_BURSTescription,
+    [MOVE_TWIN_BEAM - 1] = sTWIN_BEAMDescription,
+    [MOVE_OVERCHARGE - 1] = sOVERCHARGEDescription,
+    [MOVE_ROCK_SLING - 1] = sROCK_SLINGDescription,
+    [MOVE_VENOM_TUG - 1] = sVENOM_TUGDescription,
+    [MOVE_VENOM_DRAIN - 1] = sVENOM_DRAINDescription,
+    [MOVE_STEELSURGE - 1] = sSTEELSURGEDescription,
+    [MOVE_DEMON_DRAIN - 1] = sDEMON_DRAINDescription,
+    [MOVE_PRESSURICE - 1] = sPRESSURICEDescription,
+    [MOVE_FROST_DRAIN - 1] = sFROST_DRAINDescription,
+    [MOVE_POISON_TAP - 1] = sPOISON_TAPDescription,
+    [MOVE_STEAM_SWAP - 1] = sSTEAM_SWAPDescription,
+    [MOVE_HEARTBREAKER - 1] = sHEARTBREAKERDescription,
+    [MOVE_WASP_SNIPE - 1] = sWASP_SNIPEDescription,
+    [MOVE_POLLEN_PERFORATE - 1] = sPOLLEN_PERFORATEDescription,
+    [MOVE_NIGHTMARE_PULL - 1] = sNIGHTMARE_PULLDescription,
+    [MOVE_HEARTH_ROBBERY - 1] = sHEARTH_ROBBERYDescription,
 };

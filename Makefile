@@ -134,9 +134,7 @@ JSONPROC := tools/jsonproc/jsonproc$(EXE)
 
 PERL := perl
 
-TOOLDIRS := $(filter-out tools/agbcc tools/binutils,$(wildcard tools/*))
-TOOLBASE = $(TOOLDIRS:tools/%=%)
-TOOLS = $(foreach tool,$(TOOLBASE),tools/$(tool)/$(tool)$(EXE))
+TOOLDIRS := $(filter-out tools/agbcc tools/binutils tools/poryscript,$(wildcard tools/*))
 
 MAKEFLAGS += --no-print-directory
 

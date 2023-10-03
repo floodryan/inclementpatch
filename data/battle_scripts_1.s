@@ -395,6 +395,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectAuraWheel               @ EFFECT_AURA_WHEEL
 	.4byte BattleScript_EffectPhotonGeyser            @ EFFECT_PHOTON_GEYSER
 	.4byte BattleScript_EffectShellSideArm            @ EFFECT_SHELL_SIDE_ARM
+	.4byte BattleScript_EffectMeteorBeam              @ EFFECT_METEOR_BEAM
 	.4byte BattleScript_EffectHit                     @ EFFECT_TERRAIN_PULSE
 	.4byte BattleScript_EffectJawLock                 @ EFFECT_JAW_LOCK
 	.4byte BattleScript_EffectNoRetreat               @ EFFECT_NO_RETREAT
@@ -408,6 +409,23 @@ BattleScript_EffectShellSideArm:
 	shellsidearmcheck
 	setmoveeffect MOVE_EFFECT_POISON
 	goto BattleScript_EffectHit
+
+BattleScript_EffectMeteorBeam::
+	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
+	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
+	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_SOLAR_BEAM
+	call BattleScriptFirstChargingTurn
+	setstatchanger STAT_SPATK, 1, TRUE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_MeteorBeamEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MeteorBeamEnd
+	setgraphicalstatchangevalues
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_MeteorBeamEnd::
+	jumpifnoholdeffect BS_ATTACKER, HOLD_EFFECT_POWER_HERB, BattleScript_MoveEnd
+	call BattleScript_PowerHerbActivation
+	goto BattleScript_TwoTurnMovesSecondTurn
 
 BattleScript_EffectPhotonGeyser:
 	attackcanceler
@@ -3758,6 +3776,7 @@ BattleScript_EffectTwoTurnsAttack::
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
 	jumpifmove MOVE_SKY_ATTACK, BattleScript_EffectTwoTurnsAttackSkyAttack
+	jumpifmove MOVE_METEOR_BEAM, BattleScript_EffectTwoTurnsAttackMeteorBeam
 	jumpifmove MOVE_RAZOR_WIND, BattleScript_EffectTwoTurnsAttackRazorWind
 	jumpifmove MOVE_ICE_BURN, BattleScript_EffectTwoTurnsAttackIceBurn
 	jumpifmove MOVE_FREEZE_SHOCK, BattleScript_EffectTwoTurnsAttackFreezeShock
@@ -3769,6 +3788,8 @@ BattleScript_EffectTwoTurnsAttackContinue:
 	goto BattleScript_TwoTurnMovesSecondTurn
 BattleScript_EffectTwoTurnsAttackSkyAttack:
 	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_SKY_ATTACK
+BattleScript_EffectTwoTurnsAttackMeteorBeam:
+	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_SOLAR_BEAM
 	goto BattleScript_EffectTwoTurnsAttackContinue
 BattleScript_EffectTwoTurnsAttackRazorWind:
 	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_RAZOR_WIND
@@ -9220,3 +9241,40 @@ BattleScript_NeutralizingGasExitsLoop:
 	jumpifbytenotequal gBattlerTarget, sByteFour, BattleScript_NeutralizingGasExitsLoop	@ SOMEHOW, comparing to gBattlersCount is problematic.
 	restoretarget
 	return
+
+BattleScript_PauseDiscourageActivates:
+	pause B_WAIT_TIME_SHORT
+BattleScript_DiscourageActivates::
+	setbyte gBattlerTarget, 0
+	call BattleScript_AbilityPopUp
+BattleScript_DiscourageActivatesLoop:
+	setstatchanger STAT_SPATK, 1, TRUE
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_DiscourageActivatesLoopIncrement
+	jumpifability BS_TARGET, ABILITY_CLEAR_BODY, BattleScript_DiscouragePrevented
+	jumpifability BS_TARGET, ABILITY_HYPER_CUTTER, BattleScript_DiscouragePrevented
+	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_DiscouragePrevented
+	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_DiscouragePrevented
+	jumpifability BS_TARGET, ABILITY_SCRAPPY, BattleScript_DiscouragePrevented
+	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_DiscouragePrevented
+	jumpifability BS_TARGET, ABILITY_OBLIVIOUS, BattleScript_DiscouragePrevented
+	statbuffchange STAT_BUFF_NOT_PROTECT_AFFECTED | STAT_BUFF_ALLOW_PTR, BattleScript_DiscourageActivatesLoopIncrement
+	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, 1, BattleScript_DiscourageActivatesLoopIncrement
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNCUTSATTACKWITH
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_TryAdrenalineOrb
+BattleScript_DiscourageActivatesLoopIncrement:
+	addbyte gBattlerTarget, 1
+	goto BattleScript_DiscourageActivatesLoop
+BattleScript_DiscourageActivatesReturn:
+	return
+BattleScript_DiscouragePrevented:
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	setbyte gBattleCommunication STAT_ATK
+	stattextbuffer BS_ATTACKER
+	printstring STRINGID_STATWASNOTLOWERED
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_TryAdrenalineOrb
+	goto BattleScript_DiscourageActivatesLoopIncrement

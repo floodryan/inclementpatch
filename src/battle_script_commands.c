@@ -1136,6 +1136,7 @@ static const u16 sMoveEffectsForbiddenToInstruct[] =
     EFFECT_SKETCH,
     //EFFECT_SKY_DROP,
     EFFECT_SKULL_BASH,
+    EFFECT_METEOR_BEAM,
     EFFECT_SLEEP_TALK,
     EFFECT_SOLARBEAM,
     EFFECT_TRANSFORM,
@@ -11431,6 +11432,7 @@ static bool8 IsTwoTurnsMove(u16 move)
     if (gBattleMoves[move].effect == EFFECT_SKULL_BASH
         || gBattleMoves[move].effect == EFFECT_TWO_TURNS_ATTACK
         || gBattleMoves[move].effect == EFFECT_SOLARBEAM
+        || gBattleMoves[move].effect == EFFECT_METEOR_BEAM
         || gBattleMoves[move].effect == EFFECT_SEMI_INVULNERABLE
         || gBattleMoves[move].effect == EFFECT_BIDE)
         return TRUE;
@@ -11448,6 +11450,7 @@ static u8 AttacksThisTurn(u8 battlerId, u16 move) // Note: returns 1 if it's a c
 
     if (gBattleMoves[move].effect == EFFECT_SKULL_BASH
         || gBattleMoves[move].effect == EFFECT_TWO_TURNS_ATTACK
+        || gBattleMoves[move].effect == EFFECT_METEOR_BEAM
         || gBattleMoves[move].effect == EFFECT_SOLARBEAM
         || gBattleMoves[move].effect == EFFECT_SEMI_INVULNERABLE
         || gBattleMoves[move].effect == EFFECT_BIDE)

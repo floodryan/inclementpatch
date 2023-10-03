@@ -264,6 +264,7 @@ static const u8 sSandSongDescription[] = _("Makes sound moves Ground.");
 static const u8 sRampageDescription[] = _("No recharge after a KO.");
 static const u8 sVengeanceDescription[] = _("Ups Ghost moves in a pinch.");
 static const u8 sBlitzBoxerDescription[] = _("Punching moves go first.");
+static const u8 sDiscourageDescription[] = _("Lowers Special Attack on Entry.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -545,6 +546,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_RAMPAGE] = _("Rampage"),
     [ABILITY_VENGEANCE] = _("Vengeance"),
     [ABILITY_BLITZ_BOXER] = _("Blitz Boxer"),
+    [ABILITY_DISCOURAGE] = _("Discourage"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -827,4 +829,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_RAMPAGE] = sRampageDescription,
     [ABILITY_VENGEANCE] = sVengeanceDescription,
     [ABILITY_BLITZ_BOXER] = sBlitzBoxerDescription,
+    [ABILITY_DISCOURAGE] = sDiscourageDescription,
 };

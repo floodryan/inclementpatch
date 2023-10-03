@@ -1175,6 +1175,7 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         case EFFECT_SONICBOOM:
         //case EFFECT_MIRROR_COAT:
         case EFFECT_SKULL_BASH:
+        case EFFECT_METEOR_BEAM:
         case EFFECT_FOCUS_PUNCH:
         case EFFECT_SUPERPOWER:
         //case EFFECT_ENDEAVOR:
@@ -4557,6 +4558,10 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         break;
     case EFFECT_TWO_TURNS_ATTACK:
     case EFFECT_SKULL_BASH:
+        if (AI_DATA->atkHoldEffect == HOLD_EFFECT_POWER_HERB)
+            score += 2;
+        break;
+    case EFFECT_METEOR_BEAM:
         if (AI_DATA->atkHoldEffect == HOLD_EFFECT_POWER_HERB)
             score += 2;
         break;

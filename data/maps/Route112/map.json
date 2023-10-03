@@ -45,14 +45,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 24,
-      "y": 34,
+      "x": 27,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "6",
       "script": "Route112_EventScript_Brice",
       "flag": "0"
     },
@@ -74,11 +74,11 @@
       "x": 22,
       "y": 46,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "Route112_EventScript_Carol",
       "flag": "0"
     },
@@ -87,7 +87,7 @@
       "x": 15,
       "y": 40,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -191,7 +191,7 @@
       "x": 31,
       "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -204,7 +204,7 @@
       "x": 31,
       "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -239,7 +239,7 @@
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_ROUTE112_CABLE_CAR_STATION",
-      "dest_warp_id": 1
+      "dest_warp_id": 0
     },
     {
       "x": 6,
@@ -253,7 +253,7 @@
       "y": 46,
       "elevation": 3,
       "dest_map": "MAP_JAGGED_PASS",
-      "dest_warp_id": 1
+      "dest_warp_id": 0
     },
     {
       "x": 11,
@@ -267,7 +267,7 @@
       "y": 10,
       "elevation": 0,
       "dest_map": "MAP_FIERY_PATH",
-      "dest_warp_id": 1
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

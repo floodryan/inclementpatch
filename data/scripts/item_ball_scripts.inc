@@ -14,8 +14,8 @@ Route104_EventScript_ItemPPUp:: @ 8290CFF
 	finditem ITEM_PP_UP
 	end
 
-Route104_EventScript_ItemFriendBall:: @ 8290D0C
-	finditem ITEM_FRIEND_BALL
+Route104_EventScript_ItemSBell:: @ 8290D0C
+	finditem ITEM_SHELL_BELL
 	end
 
 Route104_EventScript_ItemAudinite:: @ 8290D19
@@ -24,6 +24,10 @@ Route104_EventScript_ItemAudinite:: @ 8290D19
 
 Route104_EventScript_ItemSootheBell:: @ 8290D26
 	finditem ITEM_SOOTHE_BELL
+	end
+
+Route104_EventScript_ItemSHELLBELL:: @ 8290D27
+	finditem ITEM_SHELL_BELL
 	end
 
 Route105_EventScript_ItemAbilityPatch:: @ 8290D33

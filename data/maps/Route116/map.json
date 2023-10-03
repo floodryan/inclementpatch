@@ -410,7 +410,7 @@
       "y": 10,
       "elevation": 0,
       "dest_map": "MAP_RUSTURF_TUNNEL",
-      "dest_warp_id": 2
+      "dest_warp_id": 0
     },
     {
       "x": 59,

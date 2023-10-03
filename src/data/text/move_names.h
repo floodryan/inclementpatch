@@ -757,6 +757,20 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_ASTRAL_BARRAGE] = _("AstrlBarrage"),
     [MOVE_EERIE_SPELL] = _("Eerie Spell"),
     [MOVE_WAVE_CRASH] = _("Wave Crash"),
+    [MOVE_HEADLONG_RUSH] = _("HeadlongRush"),
+    [MOVE_EARTH_SHOT] = _("Earth Shot"),
+    [MOVE_MIDAS_TOUCH] = _("Midas Touch"),
+    [MOVE_DRACO_BURST] = _("Draco Burst"),
+    [MOVE_TWIN_BEAM] = _("Twin Beam"),
+    [MOVE_OVERCHARGE] = _("Overcharge"),
+    [MOVE_ROCK_SLING] = _("Rock Sling"),
+    [MOVE_VENOM_TUG] = _("Venom Tug"),
+    [MOVE_STEELSURGE] = _("Steelsurge"),
+    [MOVE_DEMON_DRAIN] = _("Demon Drain"),
+    [MOVE_VENOM_DRAIN] = _("Venom Tug"),
+    [MOVE_PRESSURICE] = _("Pressurice"),
+    [MOVE_FROST_DRAIN] = _("Frost Drain"),
+
 };
 
 // Second table with longer move names for places where they fit.
@@ -1519,4 +1533,21 @@ const u8 gMoveNamesLong[MOVES_COUNT][LONG_MOVE_NAME_LENGTH + 1] =
     [MOVE_ASTRAL_BARRAGE] = _("Astral Barrage"),
     [MOVE_EERIE_SPELL] = _("Eerie Spell"),
     [MOVE_WAVE_CRASH] = _("Wave Crash"),
+    [MOVE_HEADLONG_RUSH] = _("HeadlongRush"),
+    [MOVE_EARTH_SHOT] = _("Earth Shot"),
+    [MOVE_MIDAS_TOUCH] = _("Midas Touch"),
+    [MOVE_DRACO_BURST] = _("Draco Burst"),
+    [MOVE_TWIN_BEAM] = _("Twin Beam"),
+    [MOVE_OVERCHARGE] = _("Overcharge"),
+    [MOVE_ROCK_SLING] = _("Rock Sling"),
+    [MOVE_VENOM_TUG] = _("Venom Tug"),
+    [MOVE_STEELSURGE] = _("Steelsurge"),
+    [MOVE_DEMON_DRAIN] = _("Demon Drain"),
+    [MOVE_VENOM_DRAIN] = _("Venom Tug"),
+    [MOVE_PRESSURICE] = _("Pressurice"),
+    [MOVE_FROST_DRAIN] = _("Frost Drain"),
+    [MOVE_AQUA_FANG] = _("Aqua Fang"),
+    [MOVE_POISON_TAP] = _("Poison Tap"),
+    [MOVE_STEAM_SWAP] = _("Steam Swap"),
+    
 };

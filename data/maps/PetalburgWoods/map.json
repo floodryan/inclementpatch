@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
@@ -193,13 +193,6 @@
       "dest_warp_id": 2
     },
     {
-      "x": 15,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE104",
-      "dest_warp_id": 3
-    },
-    {
       "x": 16,
       "y": 38,
       "elevation": 0,
@@ -227,7 +220,7 @@
       "dest_map": "MAP_ROUTE104",
       "dest_warp_id": 7
     },
-        {
+    {
       "x": 42,
       "y": 10,
       "elevation": 0,
@@ -239,7 +232,14 @@
       "y": 10,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_WOODS_2",
-      "dest_warp_id": 1
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE104",
+      "dest_warp_id": 3
     }
   ],
   "coord_events": [

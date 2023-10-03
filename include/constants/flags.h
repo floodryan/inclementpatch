@@ -1095,7 +1095,7 @@
 #define FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY                       0x41E
 #define FLAG_ITEM_PETALBURG_WOODS_X_ATTACK                          0x41F
 #define FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL                        0x420
-#define FLAG_ITEM_ROUTE_104_FRIEND_BALL                             0x421
+#define FLAG_ITEM_ROUTE_104_SHELL_BELL                              0x421
 #define FLAG_ITEM_PETALBURG_WOODS_ETHER                             0x422
 #define FLAG_ITEM_MAGMA_HIDEOUT_3F_3R_TM35_FLAMETHROWER             0x423
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_DAWN_STONE                   0x424

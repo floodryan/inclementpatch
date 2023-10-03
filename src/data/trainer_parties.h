@@ -1584,21 +1584,59 @@ static const struct TrainerMonItemCustomMoves sParty_Darian[] = {
     {
     .lvl = 3,
     .species = SPECIES_MAGIKARP,
-    .moves = MOVE_SPLASH, MOVE_TACKLE
+    .heldItem = ITEM_FOCUS_SASH,
+    .moves = MOVE_SPLASH, MOVE_TACKLE, MOVE_FLAIL
     },
     {
-    .lvl = -3,
-    .species = SPECIES_GOLDEEN,
-    .moves = MOVE_HORN_ATTACK, MOVE_SUPERSONIC, MOVE_WATER_SPORT, MOVE_TAIL_WHIP
-    }
+    .lvl = 3,
+    .species = SPECIES_MAGIKARP,
+    .heldItem = ITEM_FOCUS_SASH,
+    .moves = MOVE_SPLASH, MOVE_TACKLE, MOVE_FLAIL
+    },
+    {
+    .lvl = 3,
+    .species = SPECIES_MAGIKARP,
+    .heldItem = ITEM_FOCUS_SASH,
+    .moves = MOVE_SPLASH, MOVE_TACKLE, MOVE_FLAIL
+    },
+    {
+    .lvl = 3,
+    .species = SPECIES_MAGIKARP,
+    .heldItem = ITEM_FOCUS_SASH,
+    .moves = MOVE_SPLASH, MOVE_TACKLE, MOVE_FLAIL
+    },
+    {
+    .lvl = 3,
+    .species = SPECIES_MAGIKARP,
+    .heldItem = ITEM_FOCUS_SASH,
+    .moves = MOVE_SPLASH, MOVE_TACKLE, MOVE_FLAIL
+    },
+    {
+    .lvl = 3,
+    .species = SPECIES_MAGIKARP,
+    .heldItem = ITEM_FOCUS_SASH,
+    .moves = MOVE_SPLASH, MOVE_TACKLE, MOVE_FLAIL
+    },
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Cindy1[] = {
     {
+     .lvl = -1,
+     .species = SPECIES_SMEARGLE,
+     .heldItem = ITEM_QUICK_CLAW,
+    .moves = MOVE_SPIKES
+    },
+    {
     .lvl = 0,
     .species = SPECIES_BUNEARY,
     .heldItem = ITEM_NUGGET,
-    .moves = MOVE_ENDURE, MOVE_POUND, MOVE_DEFENSE_CURL, MOVE_BABY_DOLL_EYES
+    .moves = MOVE_ENDURE, MOVE_FRUSTRATION, MOVE_DEFENSE_CURL, MOVE_BABY_DOLL_EYES
+    },
+    {
+     .lvl = 0,
+     .species = SPECIES_TYROGUE,
+     .heldItem = ITEM_QUICK_CLAW,
+    .moves = MOVE_FAKE_OUT, MOVE_TACKLE, MOVE_MACH_PUNCH, MOVE_RAPID_SPIN
     }
 };
 

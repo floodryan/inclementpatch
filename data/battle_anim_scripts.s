@@ -778,7 +778,21 @@ gBattleAnims_Moves::
 	.4byte Move_GLACIAL_LANCE
 	.4byte Move_ASTRAL_BARRAGE
 	.4byte Move_EERIE_SPELL
-	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
+	.4byte Move_WAVE_CRASH
+	.4byte Move_EARTH_SHOT
+	.4byte Move_MIDAS_TOUCH
+	.4byte Move_HEADLONG_RUSH
+	.4byte Move_DRACO_BURST
+	.4byte Move_TWIN_BEAM
+	.4byte Move_OVERCHARGE
+	.4byte Move_ROCK_SLING
+	.4byte Move_VENOM_TUG
+	.4byte Move_STEELSURGE
+	.4byte Move_DEMON_DRAIN
+	.4byte Move_VENOM_DRAIN
+	.4byte Move_PRESSURICE
+	.4byte Move_FROST_DRAIN
+	.4byte Move_AQUA_FANG
 
 	.align 2
 gBattleAnims_StatusConditions::
@@ -14240,8 +14254,53 @@ Move_ASTRAL_BARRAGE::
 	end @to do:
 
 Move_EERIE_SPELL::
-	end @to do:
+	goto Move_PSYCHIC
 
+Move_WAVE_CRASH::
+	goto Move_SURF
+
+Move_HEADLONG_RUSH::
+	goto Move_FISSURE
+
+Move_EARTH_SHOT::
+	goto Move_MUD_SLAP
+
+Move_MIDAS_TOUCH::
+	goto Move_NUZZLE
+
+Move_DRACO_BURST::
+	goto Move_DRAGON_BREATH
+
+Move_TWIN_BEAM::
+	goto Move_SIGNAL_BEAM
+
+Move_OVERCHARGE::
+	goto Move_SHOCK_WAVE
+
+Move_ROCK_SLING::
+	goto Move_AURA_SPHERE
+
+Move_VENOM_TUG::
+	goto Move_SMOG
+
+Move_STEELSURGE::
+	goto Move_CLANGING_SCALES
+
+Move_DEMON_DRAIN::
+	goto Move_LEECH_LIFE
+
+Move_VENOM_DRAIN::
+	goto Move_POISON_JAB
+
+Move_PRESSURICE::
+	goto Move_GLACIATE
+
+Move_FROST_DRAIN::
+	goto Move_GLACIATE
+
+Move_AQUA_FANG::
+	goto Move_WATERFALL
+	
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
 Move_MIRROR_MOVE:
