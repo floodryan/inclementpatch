@@ -1,8 +1,6 @@
 #ifndef GUARD_GBA_DEFINES_H
 #define GUARD_GBA_DEFINES_H
 
-#include <stddef.h>
-
 #define TRUE  1
 #define FALSE 0
 

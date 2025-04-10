@@ -44,7 +44,6 @@ SOFTWARE.
 #define NLOHMANN_JSON_VERSION_PATCH 5
 
 #include <algorithm> // all_of, find, for_each
-#include <cstddef> // nullptr_t, ptrdiff_t, size_t
 #include <functional> // hash, less
 #include <initializer_list> // initializer_list
 #ifndef JSON_NO_IO
